@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  autogreen:
+  AG:
     runs-on: ubuntu-latest
     
     permissions:
@@ -17,7 +17,7 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@main
 
-      - name: Auto green
+      - name: AG
         run: |
           git config --local user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
